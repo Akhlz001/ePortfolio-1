@@ -30,13 +30,16 @@ namespace ePortfolio.Models
         [Key]
         public int SkillID { get; set; }
 
+        [Display(Name ="Type")]
         public SkillCategories Category { get; set; }
 
-        [StringLength(60), Required]
+        [StringLength(60), Required, Display(Name="Skill Name")]
         public string Name { get; set; }
 
+        [Display(Name = "Current Level")]
         public SkillLevels Level { get; set; }
 
+        [Display(Name ="Learning Priority")]
         public SkillLevels Priority { get; set; }
 
         [StringLength(500), DataType(DataType.MultilineText)]
