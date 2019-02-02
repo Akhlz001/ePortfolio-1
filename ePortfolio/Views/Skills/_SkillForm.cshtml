@@ -1,0 +1,36 @@
+﻿@model ePortfolio.Models.Skill
+@*
+    For more information on enabling MVC for empty projects,
+    visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Level" class="control-label"></label>
+    <select asp-for="Level" class="form-control" asp-items="ViewBag.SkillLevels">
+        @*<option value="0">High</option>
+        <option value="1">Above Average</option>
+        <option value="2">Below Average</option>
+        <option value="3">Low</option>*@
+    </select>
+    <span asp-validation-for="Level" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Priority" class="control-label"></label>
+    @*
+        @Html.DropDownListFor(s => s.Priority, Html.GetEnumSelectList(typeof(SkillLevels), new {@class="form-control" })
+        <select asp-for="Priority" class="form-control" asp-items="Html.GetEnumSelectList<SkillLevels>()">
+    *@
+    <select asp-for="Priority" class="form-control" asp-items="ViewBag.SkillLevels"></select>
+    <span asp-validation-for="Priority" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Evidence" class="control-label"></label>
+    <textarea asp-for="Evidence" class="form-control"></textarea>
+    <span asp-validation-for="Evidence" class="text-danger"></span>
+</div>
+
