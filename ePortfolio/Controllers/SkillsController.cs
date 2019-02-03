@@ -22,7 +22,7 @@ namespace ePortfolio.Controllers
         // GET: Skills
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Skill.ToListAsync());
+            return View(await _context.Skills.ToListAsync());
         }
 
         // GET: Skills/Details/5
@@ -33,7 +33,7 @@ namespace ePortfolio.Controllers
                 return NotFound();
             }
 
-            var skill = await _context.Skill
+            var skill = await _context.Skills
                 .FirstOrDefaultAsync(m => m.SkillID == id);
 
             if (skill == null)
@@ -77,7 +77,7 @@ namespace ePortfolio.Controllers
                 return NotFound();
             }
 
-            var skill = await _context.Skill.FindAsync(id);
+            var skill = await _context.Skills.FindAsync(id);
             if (skill == null)
             {
                 return NotFound();
@@ -132,7 +132,7 @@ namespace ePortfolio.Controllers
                 return NotFound();
             }
 
-            var skill = await _context.Skill
+            var skill = await _context.Skills
                 .FirstOrDefaultAsync(m => m.SkillID == id);
             if (skill == null)
             {
@@ -147,15 +147,15 @@ namespace ePortfolio.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var skill = await _context.Skill.FindAsync(id);
-            _context.Skill.Remove(skill);
+            var skill = await _context.Skills.FindAsync(id);
+            _context.Skills.Remove(skill);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SkillExists(int id)
         {
-            return _context.Skill.Any(e => e.SkillID == id);
+            return _context.Skills.Any(e => e.SkillID == id);
         }
 
         private void CreateSkillLevels()

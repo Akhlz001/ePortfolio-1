@@ -13,6 +13,7 @@ namespace ePortfolio.Data
             : base(options)
         {
         }
-        public DbSet<ePortfolio.Models.Skill> Skill { get; set; }
+
+        public DbSet<ePortfolio.Models.Skill> Skills { get; set; }
     }
 }
