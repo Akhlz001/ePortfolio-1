@@ -2,40 +2,67 @@
 
 @{
     ViewData["Title"] = "Details";
+    string level = "skill-low";
+
+    if(Model.Level == SkillLevels.BelowAverage)
+    {
+        level = "skill-below";
+    }
+    else if (Model.Level == SkillLevels.AboveAverage)
+    {
+        level = "skill-above";
+    }
+    else
+    {
+        level = "skill-high";
+
+    }
 }
 
-<h2>Details</h2>
+<header class="jumbotron">
+    <h1>Dr Derek Peacock</h1>
+    <h2>Skill No @Model.SkillNo: @Model.Name</h2>
+</header>
 
-<div>
-    <h4>Skill</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Level)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Level)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Priority)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Priority)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Evidence)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Evidence)
-        </dd>
-    </dl>
-</div>
+<main class="row">
+  
+    <section class="col-lg-4 main-text">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>
+                    @Model.Category Skill    
+                </h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Level)
+                    </dt>
+                    <dd>
+                        <span class="@level">&nbsp;</span>
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Priority)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Priority)
+                    </dd>
+                </dl>
+
+            </div>
+        </div>
+    </section>
+    <section class="col-lg-8">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>Evidence</h3>
+            </div>
+            <div class="panel-body">
+                @Html.Raw(Model.Evidence)
+            </div>
+        </div>
+    </section>
+</main>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.SkillID">Edit</a> |
     <a asp-action="Index">Back to List</a>

@@ -56,7 +56,7 @@ namespace ePortfolio.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SkillID,Name,Level,Priority,Evidence")] Skill skill)
+        public async Task<IActionResult> Create([Bind("SkillID,SkillNo,Category,Name,Level,Priority,Evidence")] Skill skill)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace ePortfolio.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SkillID,Name,Level,Priority,Evidence")] Skill skill)
+        public async Task<IActionResult> Edit(int id, [Bind("SkillID,SkillNo,Category,Name,Level,Priority,Evidence")] Skill skill)
         {
             if (id != skill.SkillID)
             {

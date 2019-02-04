@@ -85,12 +85,24 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
-
     <script>
-        tinymce.init({
-            selector: 'textarea'
-        });
+        tinymce.init(
+            {
+                selector: 'textarea',
+                toolbar: 'forecolor, backcolor, fontselect, fontsizeselect, bullist, numlist',
+                font_formats: 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;AkrutiKndPadmini=Akpdmi-n',
+                min_height: 300,
+                plugins: "textcolor,colorpicker,lists,table,advlist",
+                table_default_attributes:
+                {
+                    'border': 1
+                },
+                table_default_styles: {
+                    'border-collapsed': 'collapse',
+                    'width': '100%'
+                },
+                table_responsive_width: true
+            });
     </script>
-
 </body>
 </html>

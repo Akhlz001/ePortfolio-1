@@ -62,3 +62,10 @@ footer
 {
     margin-top:100px;
 }
+
+.skill-high
+{
+    width: 160px;
+    display:inline-block;
+    background-color:green;    
+}

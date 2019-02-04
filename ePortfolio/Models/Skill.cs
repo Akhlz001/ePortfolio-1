@@ -32,10 +32,10 @@ namespace ePortfolio.Models
 
         public int SkillNo { get; set; }
 
-        [Display(Name ="Type")]
+        [Display(Name ="Skill Type")]
         public SkillCategories Category { get; set; }
 
-        [StringLength(100), Required, Display(Name="Skill Name")]
+        [StringLength(100), Required, Display(Name="Skill Description")]
         public string Name { get; set; }
 
         [Display(Name = "Current Level")]
@@ -44,7 +44,7 @@ namespace ePortfolio.Models
         [Display(Name ="Learning Priority")]
         public SkillLevels Priority { get; set; }
 
-        [StringLength(500), DataType(DataType.MultilineText)]
+        [StringLength(1000), DataType(DataType.MultilineText)]
         public string Evidence { get; set; }
     }
 }
