@@ -2,9 +2,16 @@
 
 @{
     ViewData["Title"] = "Details";
-    string level = "skill-low";
 
-    if(Model.Level == SkillLevels.BelowAverage)
+    string level = "skill-low";
+    string priority = "skill-low";
+
+    if(Model.Level == SkillLevels.Low)
+    {
+        level = "skill-low";
+
+    }
+    else if(Model.Level == SkillLevels.BelowAverage)
     {
         level = "skill-below";
     }
@@ -15,7 +22,24 @@
     else
     {
         level = "skill-high";
+    }
 
+    if (Model.Priority == SkillLevels.Low)
+    {
+        priority = "skill-low";
+
+    }
+    else if (Model.Priority == SkillLevels.BelowAverage)
+    {
+        priority = "skill-below";
+    }
+    else if (Model.Priority == SkillLevels.AboveAverage)
+    {
+        priority = "skill-above";
+    }
+    else
+    {
+        level = "skill-high";
     }
 }
 
@@ -45,10 +69,9 @@
                         @Html.DisplayNameFor(model => model.Priority)
                     </dt>
                     <dd>
-                        @Html.DisplayFor(model => model.Priority)
+                        <span class="@priority">&nbsp;</span>
                     </dd>
                 </dl>
-
             </div>
         </div>
     </section>
@@ -64,6 +87,6 @@
     </section>
 </main>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.SkillID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.SkillID">Edit</a> |
+    <a class="btn btn-info" asp-action="Index">Back to List</a>
 </div>

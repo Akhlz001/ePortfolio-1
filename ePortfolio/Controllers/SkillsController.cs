@@ -22,7 +22,7 @@ namespace ePortfolio.Controllers
         // GET: Skills
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Skills.ToListAsync());
+            return View(await _context.Skills.OrderBy(s => s.SkillNo).ToListAsync());
         }
 
         // GET: Skills/Details/5

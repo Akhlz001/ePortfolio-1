@@ -4,9 +4,10 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit Skill No @Model.SkillNo</h2>
-
-<h4>Skill Details</h4>
+<header class="jumbotron">
+    <h1>Dr Derek Peacock</h1>
+    <h2>Edit Skill No @Model.SkillNo: @Model.Name</h2>
+</header>
 <hr />
 <div class="row">
     <form asp-action="Edit">
@@ -33,7 +34,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info glyphicon glyphicon-backward" asp-action="Index">&nbsp;Back to List</a>
 </div>
 
 @section Scripts 

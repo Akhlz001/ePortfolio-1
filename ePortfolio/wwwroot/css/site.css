@@ -65,7 +65,32 @@ footer
 
 .skill-high
 {
-    width: 160px;
+    width: 140px;
     display:inline-block;
+    margin: 5px;
     background-color:green;    
+}
+
+.skill-above
+{
+    width: 1050px;
+    display: inline-block;
+    margin: 5px;
+    background-color: #4cff00;
+}
+
+.skill-below
+{
+    width: 70px;
+    display: inline-block;
+    margin: 5px;
+    background-color: #ff6a00;
+}
+
+.skill-low
+{
+    width: 35px;
+    display: inline-block;
+    margin: 5px;
+    background-color: #ff0000;
 }
