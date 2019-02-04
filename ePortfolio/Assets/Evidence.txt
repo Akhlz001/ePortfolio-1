@@ -1,0 +1,15 @@
+﻿Skill No 1
+
+<h2>General</h2>
+<p><span style="font-size: 12pt;">I have been a full time teacher for over 40 years, and that involves delivering lessons at scheduled times, and within specific time frames.&nbsp; I had to ensure that all the appropriate knowledge and skills were delivered prior to fixed assessment dates, even if I was not that familiar with the learning outcomes.&nbsp; So at times that involved organising my own learning experiences so that I was able to deliver the appropriate content</span></p>
+<h2>Examples</h2>
+<ul>
+<li><span style="font-size: 12pt;">Sunderland Univeristy: BSc Degree Level 6 in Software Engineering (8 years)</span></li>
+<li><span style="font-size: 12pt;">De Montfort University: HND in Computing (4 years)</span></li>
+<li><span style="font-size: 12pt;">Oaklands College: HNC Computing, Extended Diploma (4 years)</span></li>
+<li><span style="font-size: 12pt;">Bucks New University: Foundation Degree in Computing (1 year)</span></li>
+</ul>
+
+Skill No 2
+
+<p>I completed <strong>BSc Degree</strong> where lectures were the main form of input, and no handouts or online resources were made available</p>
