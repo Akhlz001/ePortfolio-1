@@ -1,0 +1,14 @@
+﻿@model ePortfolio.Models.Skill
+
+
+@{
+    ViewData["Title"] = "Skill Details";
+}
+
+<header class="jumbotron">
+    <h1>Dr Derek Peacock</h1>
+    <h2>Skill No @Model.SkillNo: @Model.Name</h2>
+</header>
+
+<partial name="~/Views/Skills/_SkillView.cshtml" for="@Model" />
+

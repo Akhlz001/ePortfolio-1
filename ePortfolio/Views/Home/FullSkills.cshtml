@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ePortfolio.Models.Skill>
+
+@{
+    ViewData["Title"] = "Skills";
+}
+
+<header class="jumbotron">
+    <h1>Dr Derek Peacock</h1>
+    <h2>Full Listing of my Personal Skills</h2>
+</header>
+
+@foreach (var skill in Model)
+{
+    <partial name="~/Views/Skills/_SkillView.cshtml" for="@skill" />
+}
+
+
